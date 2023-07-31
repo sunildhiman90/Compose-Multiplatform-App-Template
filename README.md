@@ -99,6 +99,12 @@ The `androidApp` module depends on and uses the `shared` module as a regular And
 This is an Xcode project that builds into an iOS application.
 It depends on and uses the `shared` module as a CocoaPods dependency.
 
+### `webApp`
+
+This is a Kotlin module that builds into a web application using kotlin/js. It uses Gradle as the build system. The `webApp`
+module depends on and uses the `shared` module as a regular library.
+
+
 ## Run your application
 
 ### On desktop
@@ -113,6 +119,15 @@ You can also run Gradle tasks in the terminal:
 
 * `./gradlew run` to run application
 * `./gradlew package` to store native distribution into `build/compose/binaries`
+
+### On web
+
+To run your web application in Android Studio, select `webApp` in the list of run configurations and click **Run**:
+
+You can also run Gradle tasks in the terminal:
+
+* `./gradlew :webApp:jsBrowserRun` to run application
+
 
 ### On Android
 
@@ -303,12 +318,3 @@ If you need to change this option after you open the project in Android Studio, 
 
 To configure advanced settings, use Xcode. After opening the project in Android Studio,
 open the `iosApp/iosApp.xcworkspace` file in Xcode and make changes there.
-
-## Next steps
-
-We encourage you to explore Compose Multiplatform further and try out more projects:
-
-* [Create an application targeting iOS and Android with Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform-ios-android-template#readme)
-* [Create an application targeting Windows, macOS, and Linux with Compose Multiplatform for Desktop](https://github.com/JetBrains/compose-multiplatform-desktop-template#readme)
-* [Complete more Compose Multiplatform tutorials](https://github.com/JetBrains/compose-multiplatform/blob/master/tutorials/README.md)
-* [Explore some more advanced Compose Multiplatform example projects](https://github.com/JetBrains/compose-multiplatform/blob/master/examples/README.md)
