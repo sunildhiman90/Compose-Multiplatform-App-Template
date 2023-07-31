@@ -1,4 +1,5 @@
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -39,3 +40,9 @@ fun App() {
 }
 
 expect fun getPlatformName(): String
+
+@Preview
+@Composable
+fun CommonAppPreview() {
+    App()
+}
