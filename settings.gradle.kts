@@ -1,8 +1,12 @@
-rootProject.name = "MyApplication"
+rootProject.name = "Compose-Multiplatform-App-Template"
+// project name cannot contain spaces
 
 include(":androidApp")
 include(":shared")
 include(":desktopApp")
+
+//WebApp Step4
+include(":webApp")
 
 pluginManagement {
     repositories {

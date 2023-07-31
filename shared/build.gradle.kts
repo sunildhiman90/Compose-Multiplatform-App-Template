@@ -10,6 +10,11 @@ kotlin {
 
     jvm("desktop")
 
+    //WebApp Step1: js target for webApp
+    js(IR) {
+        browser()
+    }
+
     iosX64()
     iosArm64()
     iosSimulatorArm64()
@@ -58,6 +63,16 @@ kotlin {
                 implementation(compose.desktop.common)
             }
         }
+
+        //WebApp Step2
+        val jsMain by getting {
+            dependsOn(commonMain)
+            dependencies {
+                implementation(compose.html.core)
+            }
+        }
+
+        //WebApp Step3: Create a simple jvm module similar to desktopApp, by copying that and name it webApp
     }
 }
 
