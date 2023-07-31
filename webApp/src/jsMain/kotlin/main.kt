@@ -4,7 +4,7 @@ import org.jetbrains.skiko.wasm.onWasmReady
 fun main()  {
 
     onWasmReady {
-        Window("Compose Multiplatform App Template") {
+        BrowserViewportWindow("Compose Multiplatform App Template") {
             App()
         }
     }
