@@ -5,6 +5,8 @@ plugins {
     id("org.jetbrains.compose")
 }
 
+val kermitVersion = extra["kermit.version"] as String
+
 kotlin {
     androidTarget()
 
@@ -41,6 +43,9 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+
+                implementation("co.touchlab:kermit:$kermitVersion")
+
             }
         }
         val androidMain by getting {
