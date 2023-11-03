@@ -8,7 +8,7 @@ fun main()  {
     onWasmReady {
         //All resizing window features are supported now in CanvasBasedWindow , no need to use custom BrowserViewportWindow
         @OptIn(ExperimentalComposeUiApi::class)
-        CanvasBasedWindow {
+        CanvasBasedWindow("Compose Multiplatform App Template") {
             App()
         }
     }
