@@ -1,10 +1,14 @@
+import androidx.compose.ui.ExperimentalComposeUiApi
+import androidx.compose.ui.window.CanvasBasedWindow
 import androidx.compose.ui.window.Window
 import org.jetbrains.skiko.wasm.onWasmReady
 
 fun main()  {
 
     onWasmReady {
-        BrowserViewportWindow("Compose Multiplatform App Template") {
+        //All resizing window features are supported now in CanvasBasedWindow , no need to use custom BrowserViewportWindow
+        @OptIn(ExperimentalComposeUiApi::class)
+        CanvasBasedWindow {
             App()
         }
     }
